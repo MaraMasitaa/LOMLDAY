@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Khmer:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Qeston</title>
+</head>
+
+<body onload="run()" marginwidth="300">
+  <font face="Poppins">
+    <center>
+      <h1 id="countdown"></h1>
+    </center>
+    <form>
+           <label for="name" style="font-size: 24px;">Enter your name:</label><br>
+      <input class="name" type="text" id="name" name="name" style="font-size: 20px; padding: 8px;" required>
+      <div class="uptext">
+        <h1 class="a">THINGS PEOPLE SHOULD KNOW ABOUT ALEENA</h1>
+      </div>
+      <div id="rank_1">
+        <blockquote>
+          <h3>Q.1 On a scale of 1-10 how much she love herself?</h3>
+          <input type="radio" name="a1" id="" value="1" class="l1"> she hate herself <br>
+          <input type="radio" name="a1" id="" value="2" class="l1">0 <br>
+          <input type="radio" name="a1" id="" value="3" class="l1">she is too obsessed <br>
+          <br>
+          <h3>Q.2 Aleena's fav author?</h3>
+          <input type="radio" name="a2" id="" value="1" class="l1">Ana huang<br>
+          <input type="radio" name="a2" id="" value="2" class="l1">Masita Mara<br>
+          <input type="radio" name="a2" id="" value="3" class="l1">No ones she dont read<br>
+
+          <h3>Q.3 Things she doesnt like?</h3>
+          <input type="radio" name="a3" id="" value="1" class="l1">Argument<br>
+          <input type="radio" name="a3" id="" value="2" class="l1">Being left out <br>
+          <input type="radio" name="a3" id="" value="3" class="l1">All of the above<br>
+          <br>
+          <h3>Q.4 What's her love language?</h3>
+          <input type="radio" name="a4" id="" value="1" class="l1"> Word of affirmation<br>
+          <input type="radio" name="a4" id="" value="2" class="l1">Physical touch<br>
+          <input type="radio" name="a4" id="" value="3" class="l1">None<br>
+          <br>
+          <h3>Q.5 Things she hate?</h3>
+          <input type="radio" name="a5" id="" value="1" class="l1">Silent treatment instead of talking about the issue<br>
+          <input type="radio" name="a5" id="" value="2" class="l1">Solve the problem<br>
+          <input type="radio" name="a5" id="" value="3" class="l1">I don't know Aleena that well<br>
+          <br>
+          <h3>Q.6 Aleena's book boyfriend?</h3>
+          <input type="radio" name="a6" id="" value="1" class="l1">Kenji Kishimoto<br>
+          <input type="radio" name="a6" id="" value="2" class="l1">Atlas <br>
+          <input type="radio" name="a6" id="" value="3" class="l1">Both<br><br>
+          <h3>Q.7 What's Aleena insta username?</h3>
+          <input type="radio" name="a7" id="" value="1">Alyna_001<br>
+          <input type="radio" name="a7" id="" value="2">Alyna_01<br>
+          <input type="radio" name="a7" id="" value="3">She is fb girl<br>
+          <br>
+          <h3>Q.8 Who is Aleena's closest friend?</h3>
+          <input type="radio" name="a8" id="" value="1">Masi<br>
+          <input type="radio" name="a8" id="" value="2">Mara Masita<br>
+          <input type="radio" name="a8" id="" value="3">Masita Mara<br>
+          <input type="radio" name="a8" id="" value="4">click me<br>
+          <br>
+          <h3>Q.9 Is she a flower girl or lego kinda girl?</h3>
+          <input type="radio" name="a9" id="" value="1">Flower<br>
+          <input type="radio" name="a9" id="" value="2">Lego<br>
+          <input type="radio" name="a9" id="" value="3">Both..<br>
+          <br>
+          <h3>Q.10 On a scale of 1-10 how annoying is Aleena to y'all?</h3>
+          <input type="radio" name="a10" id="" value="1">Annoying asf<br>
+          <input type="radio" name="a10" id="" value="2">100000<br>
+          <input type="radio" name="a10" id="" value="3">-10<br>
+        </blockquote>
+      </div>
+      <center>
+        <button type="button" id="but" class="btn click" onclick="clickk()">SUBMIT</button>
+      </center><br>
+      <hr size="5px" align="left" color="aqua">
+      <div class="bar">
+        <div class="bar_1">
+          <center>
+            <h1 id="rs">RESULT &#127881;</h1>
+          </center>
+          <hr id="hr_1" color="aqua" size="5px">
+          <h3 class="namee">&nbsp;&nbsp;</h3>
+          <h3 class="h3_1">CORRECT ANSWER &#9989; :&nbsp;&nbsp;<span class="h3_rs1"></span></h3>
+          <h3 class="h3_1">INCORRECT ANSWER &#10062; :&nbsp;&nbsp;<span class="h3_rs2"></span></h3>
+          <h3 class="h3_1">TOTAL SCORE :&nbsp;&nbsp;<span class="h3_rs3"></span></h3>
+          <button id="ok" onclick="con()">OK</button>
+        </div>
+      </div>
+    </form>
+    <script>
+      const numQuestions = 10;
+      document.querySelector('.bar').style.visibility = "hidden";
+      let blurrr = document.getElementById('rank_1');
+      let correct = document.querySelector('.h3_rs1');
+      let incorrect = document.querySelector('.h3_rs2');
+      let pointt = document.querySelector('.h3_rs3');
+      let qestion = [];
+      let result = [3, 1, 3, 2, 1,3,2,4,3,1 ];
+      let correction = 0;
+      let incorrection = 0;
+      let pointtion = 0;
+      let total_second = 301;
+
+      function run() {
+        const myInterval = setInterval(function() {
+          --total_second;
+          let minute = parseInt(total_second / 60);
+          let second = total_second % 60;
+          document.getElementById("countdown").innerHTML =
+            String(minute).padStart(2, '0') +
+            ":" + String(second).padStart(2, '0');
+
+          if (total_second == 0) {
+            clearInterval(myInterval);
+            document.getElementById("button_done").disabled = true;
+          }
+        }, 1000);
+      }
+
+      function clickk() {
+        let n = document.querySelector(".name").value;
+        document.querySelector(".namee").innerHTML = `NAME:${n}`;
+        blurrr.style.filter = "blur(6px)";
+        document.querySelector('.click').style.visibility = "hidden";
+        document.querySelector('.bar').style.visibility = "visible";
+        let qArray = [];
+        for (let i = 1; i <= numQuestions; i++) {
+          let a = document.getElementsByName('a' + i);
+          for (let j = 0; j < a.length; j++) {
+            if (a[j].checked) {
+              qArray.push(parseInt(a[j].value));
+              break;
+            }
+          }
+        }
+        for (let j = 0; j < qArray.length; j++) {
+          if (qArray[j] == result[j]) {
+            correction += 1;
+          } else {
+            if (qArray.length == 0) {
+              incorrection = "No one..!";
+              break;
+            }
+            if (qArray[j] != result[j]) {
+              incorrection = incorrection + 1;
+            }
+          }
+        }
+        pointtion = correction * 10;
+        if (pointtion < 0) {
+          pointtion = 0;
+        }
+        avgg = parseFloat(pointtion / 100);
+        correct.innerHTML = correction;
+        incorrect.innerHTML = incorrection;
+        pointt.innerHTML = pointtion;
+        avg.innerHTML = avgg;
+
+      }
+    </script>
+  </font>
+  <div class="popup" style="width: 500px; height: 350px; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);">
+    <form class="form">
+      <div class="icon" style="padding: 30px;">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 34 34" height="34" width="34">
+          <path stroke-linejoin="round" stroke-width="2.5" stroke="#115DFC" d="M7.08385 9.91666L5.3572 11.0677C4.11945 11.8929 3.50056 12.3055 3.16517 12.9347C2.82977 13.564 2.83226 14.3035 2.83722 15.7825C2.84322 17.5631 2.85976 19.3774 2.90559 21.2133C3.01431 25.569 3.06868 27.7468 4.67008 29.3482C6.27148 30.9498 8.47873 31.0049 12.8932 31.1152C15.6396 31.1838 18.3616 31.1838 21.1078 31.1152C25.5224 31.0049 27.7296 30.9498 29.331 29.3482C30.9324 27.7468 30.9868 25.569 31.0954 21.2133C31.1413 19.3774 31.1578 17.5631 31.1639 15.7825C31.1688 14.3035 31.1712 13.564 30.8359 12.9347C30.5004 12.3055 29.8816 11.8929 28.6437 11.0677L26.9171 9.91666"></path>
+          <path stroke-linejoin="round" stroke-width="2.5" stroke="#115DFC" d="M2.83331 14.1667L12.6268 20.0427C14.7574 21.3211 15.8227 21.9603 17 21.9603C18.1772 21.9603 19.2426 21.3211 21.3732 20.0427L31.1666 14.1667"></path>
+          <path stroke-width="2.5" stroke="#115DFC" d="M7.08331 17V8.50001C7.08331 5.82872 7.08331 4.49307 7.91318 3.66321C8.74304 2.83334 10.0787 2.83334 12.75 2.83334H21.25C23.9212 2.83334 25.2569 2.83334 26.0868 3.66321C26.9166 4.49307 26.9166 5.82872 26.9166 8.50001V17"></path>
+          <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" stroke="#115DFC" d="M14.1667 14.1667H19.8334M14.1667 8.5H19.8334"></path>
+        </svg>
+      </div>
+      <div class="note" style="width: 450px; height: 300px; padding: 20px; border-radius: 10px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <label class="title" style="font-size: 24px; font-weight: bold;">Email me if you want to</label>
+        <span class="subtitle" style="font-size: 18px;">talk shit about Aleena</span>
+        <form>
+          <input placeholder="masitamaramsa@gmail.com" title="Enter your e-mail" name="email" type="email" class="input_field" style="font-size:20px; width: 300px; margin-top: 20px;">
+          <button class="submit" style="font-size:20px; margin-top: 10px;">Submit</button>
+        </form>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

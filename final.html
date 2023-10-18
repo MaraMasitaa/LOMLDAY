@@ -1,0 +1,20 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+    <script>         function calculateAverageScore(mathScores, scienceScores, englishScores, socialStudiesScores, historyScores) {     let mathScoreSum = mathScores.reduce((a, b) => a + b, 0);     let scienceScoreSum = scienceScores.reduce((a, b) => a + b, 0);     let englishScoreSum = englishScores.reduce((a, b) => a + b, 0);     let socialStudiesScoreSum = socialStudiesScores.reduce((a, b) => a + b, 0);     let historyScoreSum = historyScores.reduce((a, b) => a + b, 0); 
+       let totalSum = mathScoreSum + scienceScoreSum + englishScoreSum + socialStudiesScoreSum + historyScoreSum;     let totalScores = mathScores.length + scienceScores.length + 
+englishScores.length + socialStudiesScores.length + historyScores.length; 
+       return totalSum / totalScores; 
+  } 
+        let mathScores = [70, 80, 90];   let scienceScores = [75, 85, 95];   let englishScores = [80, 85, 90];   let socialStudiesScores = [75, 80, 85];   let historyScores = [70, 75, 80]; 
+   
+  let averageScore = calculateAverageScore(mathScores, scienceScores, englishScores, socialStudiesScores, historyScores);   console.log("Average Score: " + averageScore); 
+    </script> 
+</head> 
+<body> 
+    <h1>1.  Write the function code for an average score account for 5 majors</h1> 
+</body> 
+</html> 

@@ -1,0 +1,261 @@
+
+/* Packages section styles */
+.packages {
+  padding: 60px 0;
+  background-color: #f5f5f5;
+}
+
+.packages h1 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.packages p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.packages .card {
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.14);
+    -moz-box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.14);
+    box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.14);
+    transition: all 0.3s ease;
+   /* added styles */
+    width: 100%;
+  }
+
+.packages .card:hover {
+  transform: translateY(-10px);
+  -webkit-box-shadow: 0px 5px 40px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 5px 40px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 5px 40px 0px rgba(0,0,0,0.25);
+  border: #0B3E70 solid 2px;
+  max-width: 350px;
+}
+
+.packages .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* added styles */
+  }
+
+.packages .card-body {
+  padding: 20px;
+}
+
+.packages .card h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.packages .card p {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.packages .card .star {
+  margin-top: 20px;
+}
+
+.packages .card .checked {
+  color: #FFC107;
+}
+
+.packages .card h6 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.packages .card a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #1C73BA;
+  color: #fff;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.packages .card a:hover {
+  background-color: #0B3E70;
+  border: #0B3E70 solid 2px;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .packages h1 {
+    font-size: 60px;
+  }
+
+  .packages .card {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .packages .card {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+.packages .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 30px; /* added styles */
+  }
+  
+  .packages .col-md-4 {
+    flex: 1;
+  }
+  /* Swiper styles */
+.mySwiper {
+    position: relative;
+    width: 100%;
+    height: 500px;
+  }
+  
+  .mySwiper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .mySwiper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  .mySwiper .text-block {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #fff;
+  }
+  
+  .mySwiper .text-block h6 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .mySwiper .text-block h6:last-child {
+    font-size: 40px;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .mySwiper {
+      height: 350px;
+    }
+  
+    .mySwiper .text-block {
+      font-size: 40px;
+      top: 20px;
+      left: 20px;
+    }
+  
+    .mySwiper .text-block h6 {
+      font-size: 40px;
+    }
+  
+    .mySwiper .text-block h6:last-child {
+      display: none;
+    }
+  }
+
+   section {
+    width: 80%;
+    margin: 80px auto;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 8vmin;
+    color: rgb(117, 122, 187);
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 0px 0px 3px #000;
+  }
+  .explore {
+    width: 100%;
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    animation-name: changeImage;
+    animation-duration: 9s; 
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+  }
+  @keyframes changeImage {
+    0% {
+      background-image: url(almasi7.jpg);
+    }
+    25% {
+      background-image: url(almasi6.jpg);
+    }
+    50% {
+      background-image: url(almasi4.jpg);
+    }
+    60%{
+      background-image: url(almasi5.jpg);
+    }
+    75% {
+      background-image: url(almasi8.jpg);
+    }
+    100% {
+      background-image: url(almasi2.jpg);
+    }
+  }
+  .con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 2rem;
+  }
+  .newsletter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    background: #484398a0;
+    width: 80%;
+    margin: 80px auto;
+   
+  }
+  input[type=email] {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    margin-right: 10px;
+    width: 300px;
+  }
+  
+  input[type=submit] {
+    padding: 10px 20px;
+    background: #575dc9;
+    color: #100f0f;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  .my-image {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+  }

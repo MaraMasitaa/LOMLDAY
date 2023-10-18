@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="liking.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+   <link rel="stylesheet" href=" https://static.fontawesome.com/css/fontawesome-app.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.9.0/css/all.css">
+<script>
+  const text = document.getElementById('text');
+  const texts = [
+    "Im super thankful to have you in my life",
+    "I dont know what did i do to deserve you",
+    "High school life was too fucking great because of us",
+    "I will donate every brain cell to go back to those days",
+    "You know i will always have your back!",
+  ];
+
+  let counter = 0;
+  setInterval(() => {
+    text.innerHTML = texts[counter];
+    counter ++;
+    if (counter >= texts.length) {
+      counter = 0;
+    }
+  }, 5000);
+
+</script>
+<style>
+      
+      .carousel__slider__item {
+  position: relative;
+  width: 280px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item__3d-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.7s;
+  transform-origin: center center;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.item__3d-frame__box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+  backface-visibility: hidden;
+}
+
+.item__3d-frame__box--front {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.item__3d-frame__box--left,
+.item__3d-frame__box--right {
+  height: 100%;
+  width: 30px;
+}
+
+.item__3d-frame__box--right {
+  right: 0;
+  transform-origin: 0 50%;
+  transform: rotateY(-90deg) translateZ(-140px);
+}
+
+.item__3d-frame__box--left {
+  left: 0;
+  transform-origin: 100% 50%;
+  transform: rotateY(90deg) translateZ(-140px);
+}
+
+
+.card {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 32px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #9eafd9;
+
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: #222;
+}
+
+.content .heading {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.content .para {
+  line-height: 1.5;
+  font-size: 16px;
+  text-align: center;
+}
+
+.content .btn {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background-color: #1a0933;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.content .btn:hover {
+  background-color: #082d0a;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #9cc0db;
+  z-index: -1;
+  border-radius: 10px 10px 0 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover::before {
+  height: 100%;
+  color:rgb(7, 132, 148);
+}
+
+.card:hover {
+  box-shadow: none;
+  color: #9eafd9;
+}
+
+.content .btn:hover {
+  color: #a30707;
+}
+
+      </style>
+      <link rel="stylesheet" href="liking.css">
+      <script src="liking.js"></script>
+
+
+
+     
+</head>
+<body>
+  <div class="card">
+    <div class="content">
+      <p class="heading">To my girl</p>
+      <p class="para" id="text">I was enchanted to meet you. Im totally glad that we both end up as friend <br> I will love you in every universe. keep on swimming... im rooting for u always !</p>
+      <button class="btn">my bb</button>
+    </div>
+  </div>
+  
+      <div class="carousel__slider__item">
+        <div class="item__3d-frame">
+          <div style=" width: 100%;
+          height: 100%;
+          object-fit: cover;" class="item__3d-frame__box item__3d-frame__box--front">
+            <img style="background-size: cover; background-position: center;" src="harry.jpg" alt="Image 1">
+          </div>
+          <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+          <div class="item__3d-frame__box item__3d-frame__box--right"></div>
+        </div>
+      </div>
+      <div class="carousel__slider__item">
+        <div class="item__3d-frame">
+          <div class="item__3d-frame__box item__3d-frame__box--front">
+            <img src="taylir.jpg" alt="Image 2">
+          </div>
+          <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+          <div class="item__3d-frame__box item__3d-frame__box--right"></div>
+        </div>
+      </div>
+      <div class="carousel__slider__item">
+        <div class="item__3d-frame">
+          <div class="item__3d-frame__box item__3d-frame__box--front">
+            <img src="study.jpg" alt="Image 3">
+          </div>
+          <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+          <div class="item__3d-frame__box item__3d-frame__box--right"></div>
+        </div>
+      </div>
+      <div class="carousel__slider__item">
+        <div class="item__3d-frame">
+          <div class="item__3d-frame__box item__3d-frame__box--front">
+            <img src="books.jpg" alt="Image 3">
+          </div>
+          <div class="item__3d-frame__box item__3d-frame__box--left"></div>
+          <div class="item__3d-frame__box item__3d-frame__box--right"></div>
+        </div>
+      </div>
+    
+    
+</body>
+</html>
